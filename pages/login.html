@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Harmonix Music Academy</title>
+
+  <!-- Google Fonts for typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Authentication CSS -->
+  <link rel="stylesheet" href="../css/auth.css" />
+</head>
+<body>
+
+  <!-- Main Login Card Container -->
+  <div class="auth-container">
+
+    <!-- Back to home navigation -->
+    <a href="../index.html" class="back-link">&larr; Back to Home</a>
+
+    <!-- Header / Branding -->
+    <div class="auth-header">
+      <a href="../index.html" class="logo">
+        <span class="logo-icon">&#9834;</span>
+        <span class="logo-text">Harmonix</span>
+      </a>
+      <h1>Welcome Back</h1>
+      <p>Please enter your credentials to login</p>
+    </div>
+
+    <!-- Alert / Message Box for errors and success messages -->
+    <div id="messageBox" class="message-box"></div>
+
+    <!-- Login Form -->
+    <form id="loginForm" novalidate>
+
+      <!-- Email Field -->
+      <div class="form-group">
+        <label for="loginEmail">Email Address</label>
+        <input 
+          type="email" 
+          id="loginEmail" 
+          placeholder="e.g. student@harmonix.com" 
+          autocomplete="email"
+        />
+      </div>
+
+      <!-- Password Field with Show/Hide toggle -->
+      <div class="form-group">
+        <label for="loginPassword">Password</label>
+        <div class="password-wrapper">
+          <input 
+            type="password" 
+            id="loginPassword" 
+            placeholder="Enter your password" 
+            autocomplete="current-password"
+          />
+          <button 
+            type="button" 
+            id="togglePasswordBtn" 
+            class="password-toggle-btn" 
+            title="Show or hide password"
+            aria-label="Toggle password visibility"
+          >
+            &#128065;
+          </button>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" id="loginBtn" class="submit-btn">Login</button>
+
+    </form>
+
+    <!-- Link to Register Page -->
+    <div class="auth-footer">
+      Don't have an account? <a href="register.html">Register here</a>
+    </div>
+
+  </div>
+
+  <!-- Vanilla JavaScript File -->
+  <script src="../js/login.js"></script>
+</body>
+</html>

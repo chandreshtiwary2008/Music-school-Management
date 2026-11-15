@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Harmonix Music Academy</title>
+
+  <!-- Google Fonts for typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Authentication CSS -->
+  <link rel="stylesheet" href="../css/auth.css" />
+</head>
+<body>
+
+  <!-- Main Registration Card Container -->
+  <div class="auth-container">
+
+    <!-- Back to home navigation -->
+    <a href="../index.html" class="back-link">&larr; Back to Home</a>
+
+    <!-- Header / Branding -->
+    <div class="auth-header">
+      <a href="../index.html" class="logo">
+        <span class="logo-icon">&#9834;</span>
+        <span class="logo-text">Harmonix</span>
+      </a>
+      <h1>Create Account</h1>
+      <p>Join Harmonix Music Academy today</p>
+    </div>
+
+    <!-- Alert / Message Box for errors and success messages -->
+    <div id="messageBox" class="message-box"></div>
+
+    <!-- Registration Form -->
+    <form id="registerForm" novalidate>
+
+      <!-- Full Name Field -->
+      <div class="form-group">
+        <label for="regFullName">Full Name</label>
+        <input 
+          type="text" 
+          id="regFullName" 
+          placeholder="e.g. Alex Morgan" 
+          autocomplete="name"
+        />
+      </div>
+
+      <!-- Email Field -->
+      <div class="form-group">
+        <label for="regEmail">Email Address</label>
+        <input 
+          type="email" 
+          id="regEmail" 
+          placeholder="e.g. alex@example.com" 
+          autocomplete="email"
+        />
+      </div>
+
+      <!-- Password Field with Show/Hide toggle -->
+      <div class="form-group">
+        <label for="regPassword">Password</label>
+        <div class="password-wrapper">
+          <input 
+            type="password" 
+            id="regPassword" 
+            placeholder="At least 6 characters" 
+            autocomplete="new-password"
+          />
+          <button 
+            type="button" 
+            id="toggleRegPasswordBtn" 
+            class="password-toggle-btn" 
+            title="Show or hide password"
+            aria-label="Toggle password visibility"
+          >
+            &#128065;
+          </button>
+        </div>
+      </div>
+
+      <!-- Phone Number Field -->
+      <div class="form-group">
+        <label for="regPhone">Phone Number</label>
+        <input 
+          type="tel" 
+          id="regPhone" 
+          placeholder="e.g. 9876543210" 
+          autocomplete="tel"
+        />
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" id="registerBtn" class="submit-btn">Register</button>
+
+    </form>
+
+    <!-- Link to Login Page -->
+    <div class="auth-footer">
+      Already have an account? <a href="login.html">Login here</a>
+    </div>
+
+  </div>
+
+  <!-- Vanilla JavaScript File -->
+  <script src="../js/register.js"></script>
+</body>
+</html>

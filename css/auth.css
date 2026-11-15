@@ -1,0 +1,265 @@
+/* ============================================================
+   HARMONIX MUSIC ACADEMY — AUTHENTICATION STYLES (auth.css)
+   Clean, simple, beginner-friendly CSS for Login & Register pages.
+   Theme: Elegant Dark (Black, Deep Purple, Gold Accents)
+   ============================================================ */
+
+/* --- 1. CSS VARIABLES (Colors, Fonts, Spacing) --- */
+:root {
+  --bg-color: #0a0a0f;           /* Deep dark background */
+  --card-bg: #141424;            /* Dark purple-tinted card background */
+  --input-bg: #1a1a30;           /* Input field background */
+  --border-color: #2e2a4a;       /* Subtle purple border */
+  --purple-primary: #7c3aed;     /* Brand purple */
+  --purple-hover: #9055f7;       /* Lighter purple for button hover */
+  --gold-accent: #d4af37;        /* Gold highlight */
+  --gold-hover: #f3ca4c;         /* Lighter gold */
+  --text-primary: #ffffff;       /* Pure white text */
+  --text-muted: #a0a0c0;         /* Soft secondary text */
+  --error-color: #f87171;        /* Red error color */
+  --error-bg: rgba(239, 68, 68, 0.15);
+  --success-color: #4ade80;      /* Green success color */
+  --success-bg: rgba(34, 197, 94, 0.15);
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Cinzel', serif;
+}
+
+/* --- 2. GLOBAL RESET & BASE STYLES --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+/* --- 3. AUTHENTICATION CONTAINER (CARD) --- */
+.auth-container {
+  width: 100%;
+  max-width: 440px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 36px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(124, 58, 237, 0.15);
+}
+
+/* --- 4. HEADER & LOGO --- */
+.auth-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-header .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.auth-header .logo-icon {
+  font-size: 26px;
+  color: var(--gold-accent);
+}
+
+.auth-header .logo-text {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+}
+
+.auth-header h1 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.auth-header p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* Back Link to Home */
+.back-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--gold-accent);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--gold-hover);
+  text-decoration: underline;
+}
+
+/* --- 5. ALERT / MESSAGE BOX --- */
+.message-box {
+  display: none; /* Hidden by default until JavaScript shows it */
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 18px;
+  line-height: 1.4;
+  animation: fadeIn 0.3s ease;
+}
+
+.message-box.error {
+  display: block;
+  background-color: var(--error-bg);
+  color: var(--error-color);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.message-box.success {
+  display: block;
+  background-color: var(--success-bg);
+  color: var(--success-color);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 6. FORM GROUPS & INPUTS --- */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  border-color: var(--purple-primary);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+}
+
+.form-group input::placeholder {
+  color: #646485;
+}
+
+/* --- 7. PASSWORD INPUT WITH TOGGLE BUTTON --- */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  padding-right: 44px; /* Space for the toggle icon */
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 16px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.password-toggle-btn:hover {
+  color: var(--gold-accent);
+}
+
+/* --- 8. SUBMIT BUTTON --- */
+.submit-btn {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, var(--purple-primary), #5b21b6);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  margin-top: 8px;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.4);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, var(--purple-hover), var(--purple-primary));
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.55);
+}
+
+.submit-btn:active {
+  transform: scale(0.99);
+}
+
+/* --- 9. FOOTER SWITCH LINKS --- */
+.auth-footer {
+  text-align: center;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-color);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.auth-footer a {
+  color: var(--gold-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.auth-footer a:hover {
+  color: var(--gold-hover);
+  text-decoration: underline;
+}
+
+/* --- 10. RESPONSIVE DESIGN --- */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 26px 20px;
+  }
+
+  .auth-header h1 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Harmonix Music Academy – Discover your musical potential with world-class instructors, flexible schedules, and a personalized learning journey." />
+  <title>Harmonix Music Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+
+      <a href="#home" class="navbar__brand" aria-label="Harmonix Music Academy – home">
+        <span class="brand-icon" aria-hidden="true">♪</span>
+        <span class="brand-name">Harmonix</span>
+      </a>
+
+      <nav class="navbar__nav" id="navMenu" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li><a class="nav-link active" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#courses">Courses</a></li>
+          <li><a class="nav-link" href="#teachers">Teachers</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="pages/login.html" class="btn btn--ghost" id="loginBtn">Login</a>
+        <a href="pages/register.html" class="btn btn--primary">Get Started</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu"
+              aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+    <section class="hero" id="home" aria-labelledby="heroHeading">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__overlay"></div>
+        <div class="hero__particles" id="particles"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__tag animate-fade-up delay-1">✦ &nbsp;World-Class Music Education</p>
+        <h1 class="hero__heading animate-fade-up delay-2" id="heroHeading">
+          Discover Your<br />
+          <span class="text-gold">Musical Potential</span>
+        </h1>
+        <p class="hero__subtext animate-fade-up delay-3">
+          Join thousands of passionate musicians at Harmonix Academy. Our award-winning faculty guides you from your very first note to the professional stage — at your own pace, on your own schedule.
+        </p>
+        <div class="hero__cta animate-fade-up delay-4">
+          <a href="#courses" class="btn btn--primary btn--lg">Explore Courses</a>
+          <a href="pages/register.html" class="btn btn--outline btn--lg">Join Now</a>
+        </div>
+
+        <div class="hero__stats animate-fade-up delay-5" role="list">
+          <div class="stat" role="listitem">
+            <span class="stat__number" data-target="1200">0</span><span class="stat__suffix">+</span>
+            <span class="stat__label">Students</span>
+          </div>
+          <div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat__number" data-target="45">0</span><span class="stat__suffix">+</span>
+            <span class="stat__label">Expert Teachers</span>
+          </div>
+          <div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat__number" data-target="12">0</span><span class="stat__suffix">+</span>
+            <span class="stat__label">Instruments</span>
+          </div>
+          <div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat__number" data-target="98">0</span><span class="stat__suffix">%</span>
+            <span class="stat__label">Satisfaction</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+        <span class="scroll-indicator__icon" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════ -->
+    <section class="section about" id="about" aria-labelledby="aboutHeading">
+      <div class="container">
+
+        <div class="section-header">
+          <p class="section-tag">Our Story</p>
+          <h2 class="section-title" id="aboutHeading">More Than Music —<br /><span class="text-gold">A Lifelong Journey</span></h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__visual reveal">
+            <div class="about__image-frame">
+              <div class="about__image-bg" aria-hidden="true">
+                <div class="music-visual">
+                  <div class="music-note n1" aria-hidden="true">♩</div>
+                  <div class="music-note n2" aria-hidden="true">♪</div>
+                  <div class="music-note n3" aria-hidden="true">♫</div>
+                  <div class="music-note n4" aria-hidden="true">♬</div>
+                  <div class="music-note n5" aria-hidden="true">𝄞</div>
+                  <div class="waveform" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="about__badge">
+                <span class="about__badge-number">15+</span>
+                <span class="about__badge-text">Years of Excellence</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__content reveal">
+            <h3 class="about__subtitle">Who We Are</h3>
+            <p class="about__text">
+              Founded in 2009, Harmonix Music Academy has grown into one of the region's most respected music institutions. We believe music is a universal language that transforms lives — building discipline, creativity, confidence, and deep emotional expression.
+            </p>
+
+            <div class="about__pillars">
+              <div class="pillar">
+                <div class="pillar__icon" aria-hidden="true">🎯</div>
+                <div>
+                  <h4 class="pillar__title">Our Mission</h4>
+                  <p class="pillar__text">To make exceptional music education accessible to everyone, nurturing talent at every skill level.</p>
+                </div>
+              </div>
+              <div class="pillar">
+                <div class="pillar__icon" aria-hidden="true">🔭</div>
+                <div>
+                  <h4 class="pillar__title">Our Vision</h4>
+                  <p class="pillar__text">To be the premier music institution that inspires a lifelong love of music in every student we teach.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about__highlights">
+              <div class="highlight">
+                <span class="highlight__check" aria-hidden="true">✓</span>
+                <span>ABRSM &amp; Trinity certified curriculum</span>
+              </div>
+              <div class="highlight">
+                <span class="highlight__check" aria-hidden="true">✓</span>
+                <span>State-of-the-art soundproof studios</span>
+              </div>
+              <div class="highlight">
+                <span class="highlight__check" aria-hidden="true">✓</span>
+                <span>Annual student concerts &amp; recitals</span>
+              </div>
+              <div class="highlight">
+                <span class="highlight__check" aria-hidden="true">✓</span>
+                <span>Online &amp; in-person classes available</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         COURSES
+    ═══════════════════════════════════════ -->
+    <section class="section courses" id="courses" aria-labelledby="coursesHeading">
+      <div class="container">
+
+        <div class="section-header">
+          <p class="section-tag">What We Offer</p>
+          <h2 class="section-title" id="coursesHeading">Our <span class="text-gold">Courses</span></h2>
+          <p class="section-desc">From classical to contemporary, our expertly designed programs suit beginners and advanced musicians alike.</p>
+        </div>
+
+        <div class="courses__grid">
+
+          <article class="course-card reveal" tabindex="0">
+            <div class="course-card__icon-wrap" aria-hidden="true">
+              <span class="course-card__emoji">🎸</span>
+            </div>
+            <div class="course-card__body">
+              <h3 class="course-card__title">Guitar</h3>
+              <p class="course-card__desc">Master acoustic, electric, and classical guitar through progressive lessons covering technique, theory, and performance.</p>
+              <div class="course-card__meta">
+                <span class="badge">Beginner – Advanced</span>
+                <span class="badge badge--gold">Most Popular</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <a href="#contact" class="btn btn--primary btn--sm">Enrol Now</a>
+            </div>
+          </article>
+
+          <article class="course-card reveal" tabindex="0">
+            <div class="course-card__icon-wrap" aria-hidden="true">
+              <span class="course-card__emoji">🎹</span>
+            </div>
+            <div class="course-card__body">
+              <h3 class="course-card__title">Piano</h3>
+              <p class="course-card__desc">Learn classical repertoire, music theory, and sight-reading through our structured, internationally aligned piano program.</p>
+              <div class="course-card__meta">
+                <span class="badge">Beginner – Advanced</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <a href="#contact" class="btn btn--primary btn--sm">Enrol Now</a>
+            </div>
+          </article>
+
+          <article class="course-card reveal" tabindex="0">
+            <div class="course-card__icon-wrap" aria-hidden="true">
+              <span class="course-card__emoji">🎤</span>
+            </div>
+            <div class="course-card__body">
+              <h3 class="course-card__title">Vocal / Singing</h3>
+              <p class="course-card__desc">Develop your voice with training in breath control, pitch, range extension, and performance presence across all genres.</p>
+              <div class="course-card__meta">
+                <span class="badge">All Levels</span>
+                <span class="badge badge--gold">Featured</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <a href="#contact" class="btn btn--primary btn--sm">Enrol Now</a>
+            </div>
+          </article>
+
+          <article class="course-card reveal" tabindex="0">
+            <div class="course-card__icon-wrap" aria-hidden="true">
+              <span class="course-card__emoji">🥁</span>
+            </div>
+            <div class="course-card__body">
+              <h3 class="course-card__title">Drums &amp; Percussion</h3>
+              <p class="course-card__desc">Build rhythm, timing, and coordination with our comprehensive drum program — from rudiments to full drum-kit mastery.</p>
+              <div class="course-card__meta">
+                <span class="badge">Beginner – Intermediate</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <a href="#contact" class="btn btn--primary btn--sm">Enrol Now</a>
+            </div>
+          </article>
+
+          <article class="course-card reveal" tabindex="0">
+            <div class="course-card__icon-wrap" aria-hidden="true">
+              <span class="course-card__emoji">🎻</span>
+            </div>
+            <div class="course-card__body">
+              <h3 class="course-card__title">Violin</h3>
+              <p class="course-card__desc">Explore the elegance of string music with lessons in bowing technique, intonation, classical pieces, and ensemble playing.</p>
+              <div class="course-card__meta">
+                <span class="badge">Beginner – Advanced</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <a href="#contact" class="btn btn--primary btn--sm">Enrol Now</a>
+            </div>
+          </article>
+
+          <article class="course-card reveal" tabindex="0">
+            <div class="course-card__icon-wrap" aria-hidden="true">
+              <span class="course-card__emoji">🎵</span>
+            </div>
+            <div class="course-card__body">
+              <h3 class="course-card__title">Keyboard</h3>
+              <p class="course-card__desc">Learn chords, progressions, and contemporary styles with our keyboard course — perfect for aspiring producers and performers.</p>
+              <div class="course-card__meta">
+                <span class="badge">All Levels</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <a href="#contact" class="btn btn--primary btn--sm">Enrol Now</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         TEACHERS
+    ═══════════════════════════════════════ -->
+    <section class="section teachers" id="teachers" aria-labelledby="teachersHeading">
+      <div class="container">
+
+        <div class="section-header">
+          <p class="section-tag">Faculty &amp; Mentors</p>
+          <h2 class="section-title" id="teachersHeading">Faculty Details <span class="text-gold">Coming Soon</span></h2>
+          <p class="section-desc">Our dedicated faculty profiles and instructor details are currently being finalized and will be announced shortly.</p>
+        </div>
+
+        <div class="teachers__grid">
+
+          <article class="teacher-card reveal" tabindex="0">
+            <div class="teacher-card__avatar">
+              <div class="avatar-placeholder" style="--hue:260; font-size:1.8rem;" aria-label="Piano Faculty Placeholder">🎹</div>
+            </div>
+            <div class="teacher-card__body">
+              <h3 class="teacher-card__name">Piano &amp; Keyboard</h3>
+              <p class="teacher-card__instrument text-gold">Coming Soon</p>
+              <p class="teacher-card__bio">Faculty profiles, qualifications, and lesson schedules for piano and keyboard programs will be available soon.</p>
+              <div class="teacher-card__tags">
+                <span class="tag">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="teacher-card reveal" tabindex="0">
+            <div class="teacher-card__avatar">
+              <div class="avatar-placeholder" style="--hue:200; font-size:1.8rem;" aria-label="Guitar Faculty Placeholder">🎸</div>
+            </div>
+            <div class="teacher-card__body">
+              <h3 class="teacher-card__name">Guitar &amp; Strings</h3>
+              <p class="teacher-card__instrument text-gold">Coming Soon</p>
+              <p class="teacher-card__bio">Faculty profiles, qualifications, and lesson schedules for acoustic, electric, and bass guitar programs will be available soon.</p>
+              <div class="teacher-card__tags">
+                <span class="tag">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="teacher-card reveal" tabindex="0">
+            <div class="teacher-card__avatar">
+              <div class="avatar-placeholder" style="--hue:320; font-size:1.8rem;" aria-label="Vocals Faculty Placeholder">🎤</div>
+            </div>
+            <div class="teacher-card__body">
+              <h3 class="teacher-card__name">Vocals &amp; Choir</h3>
+              <p class="teacher-card__instrument text-gold">Coming Soon</p>
+              <p class="teacher-card__bio">Faculty profiles, qualifications, and lesson schedules for classical, contemporary, and choir vocal training will be available soon.</p>
+              <div class="teacher-card__tags">
+                <span class="tag">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="teacher-card reveal" tabindex="0">
+            <div class="teacher-card__avatar">
+              <div class="avatar-placeholder" style="--hue:30; font-size:1.8rem;" aria-label="Drums Faculty Placeholder">🥁</div>
+            </div>
+            <div class="teacher-card__body">
+              <h3 class="teacher-card__name">Drums &amp; Percussion</h3>
+              <p class="teacher-card__instrument text-gold">Coming Soon</p>
+              <p class="teacher-card__bio">Faculty profiles, qualifications, and lesson schedules for rhythm, percussion, and drum-kit programs will be available soon.</p>
+              <div class="teacher-card__tags">
+                <span class="tag">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         WHY CHOOSE US
+    ═══════════════════════════════════════ -->
+    <section class="section why-us" id="why-us" aria-labelledby="whyHeading">
+      <div class="container">
+
+        <div class="section-header">
+          <p class="section-tag">Why Harmonix</p>
+          <h2 class="section-title" id="whyHeading">The <span class="text-gold">Harmonix</span> Difference</h2>
+        </div>
+
+        <div class="why-us__grid">
+
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">🏆</div>
+            <h3 class="why-card__title">Experienced Teachers</h3>
+            <p class="why-card__text">All our instructors hold internationally recognised qualifications and have real-world professional performance experience.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">🗓️</div>
+            <h3 class="why-card__title">Flexible Schedules</h3>
+            <p class="why-card__text">Morning, evening, and weekend slots available. Learn online or in-person — we fit into your life, not the other way around.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">🎯</div>
+            <h3 class="why-card__title">Personalized Learning</h3>
+            <p class="why-card__text">Individual lesson plans tailored to each student's goals, learning pace, and musical interests. No cookie-cutter approach here.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">🏛️</div>
+            <h3 class="why-card__title">Professional Environment</h3>
+            <p class="why-card__text">Acoustically treated practice rooms, professional-grade instruments, and a supportive community that feels like family.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">🎓</div>
+            <h3 class="why-card__title">Certified Curriculum</h3>
+            <p class="why-card__text">Our graded courses are aligned with ABRSM and Trinity Guildhall standards, giving students globally recognised certifications.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">🎭</div>
+            <h3 class="why-card__title">Performance Opportunities</h3>
+            <p class="why-card__text">Regular recitals, school concerts, and competitions give every student the confidence and experience of performing live on stage.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════ -->
+    <section class="section testimonials" id="testimonials" aria-labelledby="testimonialsHeading">
+      <div class="container">
+
+        <div class="section-header">
+          <p class="section-tag">Student Stories</p>
+          <h2 class="section-title" id="testimonialsHeading">What Our <span class="text-gold">Students Say</span></h2>
+        </div>
+
+        <div class="testimonials__track-wrap" aria-live="polite">
+          <div class="testimonials__track" id="testimonialsTrack">
+
+            <blockquote class="testimonial-card">
+              <p class="testimonial-card__quote">"Joining Harmonix was the best decision I ever made. Within six months I went from complete beginner to playing my first recital. The teachers are incredibly patient and inspiring."</p>
+              <footer class="testimonial-card__footer">
+                <div class="avatar-placeholder sm" style="--hue:120" aria-hidden="true">SL</div>
+                <div>
+                  <cite class="testimonial-card__name">Sophie Lee</cite>
+                  <span class="testimonial-card__course">Piano – Intermediate</span>
+                </div>
+                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonial-card">
+              <p class="testimonial-card__quote">"James is an extraordinary guitar teacher. He customises every lesson around what I want to achieve. I went from open chords to fingerstyle in four months. Absolutely love it here!"</p>
+              <footer class="testimonial-card__footer">
+                <div class="avatar-placeholder sm" style="--hue:200" aria-hidden="true">MR</div>
+                <div>
+                  <cite class="testimonial-card__name">Marco Rossi</cite>
+                  <span class="testimonial-card__course">Guitar – Beginner</span>
+                </div>
+                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonial-card">
+              <p class="testimonial-card__quote">"The vocal training with Aisha completely transformed my confidence. Her technique is world-class and she genuinely cares about every student's progress. I can't recommend Harmonix enough."</p>
+              <footer class="testimonial-card__footer">
+                <div class="avatar-placeholder sm" style="--hue:300" aria-hidden="true">PN</div>
+                <div>
+                  <cite class="testimonial-card__name">Priya Nair</cite>
+                  <span class="testimonial-card__course">Vocals – Advanced</span>
+                </div>
+                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </footer>
+            </blockquote>
+
+          </div>
+        </div>
+
+        <div class="testimonials__controls" role="group" aria-label="Testimonial navigation">
+          <button class="testimonial-btn" id="prevTestimonial" aria-label="Previous testimonial">&#8592;</button>
+          <div class="testimonials__dots" id="testimonialDots" role="list"></div>
+          <button class="testimonial-btn" id="nextTestimonial" aria-label="Next testimonial">&#8594;</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════ -->
+    <section class="section contact" id="contact" aria-labelledby="contactHeading">
+      <div class="container">
+
+        <div class="section-header">
+          <p class="section-tag">Get In Touch</p>
+          <h2 class="section-title" id="contactHeading">Start Your <span class="text-gold">Musical Journey</span></h2>
+          <p class="section-desc">Fill in the form and our team will get back to you within 24 hours.</p>
+        </div>
+
+        <div class="contact__grid">
+
+          <!-- Info Panel -->
+          <div class="contact__info reveal">
+            <div class="contact-info-card">
+              <div class="contact-info-item">
+                <span class="contact-info-item__icon" aria-hidden="true">📧</span>
+                <div>
+                  <h4>Email Us</h4>
+                  <p>Email coming soon</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <span class="contact-info-item__icon" aria-hidden="true">📞</span>
+                <div>
+                  <h4>Call Us</h4>
+                  <p>+91 XXXXX XXXXX</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <span class="contact-info-item__icon" aria-hidden="true">📍</span>
+                <div>
+                  <h4>Visit Us</h4>
+                  <address>Lovely Professional University, Phagwara, Punjab, India</address>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <span class="contact-info-item__icon" aria-hidden="true">🕐</span>
+                <div>
+                  <h4>Opening Hours</h4>
+                  <p>Monday &ndash; Saturday: 9:00 AM &ndash; 5:00 PM<br />Sunday: Closed</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <span class="contact-info-item__icon" aria-hidden="true">💬</span>
+                <div>
+                  <h4>Other Contact</h4>
+                  <p>Coming Soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact__form-wrap reveal">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="firstName" name="firstName" autocomplete="given-name"
+                         placeholder="John" required minlength="2" />
+                  <span class="form-error" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="lastName" name="lastName" autocomplete="family-name"
+                         placeholder="Doe" required minlength="2" />
+                  <span class="form-error" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email"
+                       placeholder="john@example.com" required />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel"
+                       placeholder="+1 (555) 000-0000" />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="course">Course of Interest <span aria-hidden="true">*</span></label>
+                <select id="course" name="course" required>
+                  <option value="" disabled selected>Select a course…</option>
+                  <option value="guitar">Guitar</option>
+                  <option value="piano">Piano</option>
+                  <option value="vocal">Vocal / Singing</option>
+                  <option value="drums">Drums &amp; Percussion</option>
+                  <option value="violin">Violin</option>
+                  <option value="keyboard">Keyboard</option>
+                </select>
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" rows="4"
+                          placeholder="Tell us about your musical background and goals…"
+                          required minlength="10"></textarea>
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                <span class="btn__text">Send Message</span>
+                <span class="btn__spinner" aria-hidden="true"></span>
+              </button>
+              <p class="form-success" id="formSuccess" role="alert" aria-live="polite" hidden>
+                🎉 Thank you! We'll be in touch within 24 hours.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <a href="#home" class="navbar__brand" aria-label="Harmonix – back to top">
+            <span class="brand-icon" aria-hidden="true">♪</span>
+            <span class="brand-name">Harmonix</span>
+          </a>
+          <p class="footer__tagline">Where passion meets performance. Nurturing musicians since 2009.</p>
+          <div class="footer__social" role="list" aria-label="Social media links">
+            <a href="#" class="social-link" role="listitem" aria-label="Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" role="listitem" aria-label="Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" width="20" height="20">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" role="listitem" aria-label="YouTube" title="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#000"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" role="listitem" aria-label="Twitter / X" title="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer__nav" aria-label="Quick links">
+          <h4 class="footer__nav-title">Quick Links</h4>
+          <ul role="list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#teachers">Teachers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__nav" aria-label="Courses links">
+          <h4 class="footer__nav-title">Courses</h4>
+          <ul role="list">
+            <li><a href="#courses">Guitar</a></li>
+            <li><a href="#courses">Piano</a></li>
+            <li><a href="#courses">Vocals</a></li>
+            <li><a href="#courses">Drums</a></li>
+            <li><a href="#courses">Violin</a></li>
+            <li><a href="#courses">Keyboard</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__newsletter">
+          <h4 class="footer__nav-title">Stay in Tune</h4>
+          <p>Subscribe for news, events, and free music resources.</p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input type="email" id="newsletterEmail" name="newsletterEmail"
+                   placeholder="your@email.com" autocomplete="email" required
+                   aria-label="Email address for newsletter" />
+            <button type="submit" class="btn btn--primary btn--sm" aria-label="Subscribe to newsletter">Subscribe</button>
+          </form>
+          <p class="newsletter-success" id="newsletterSuccess" hidden>✓ You're subscribed!</p>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="copyrightYear"></span> Harmonix Music Academy. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

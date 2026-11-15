@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Harmonix Music Academy – Student Dashboard." />
+  <title>Dashboard — Harmonix Music Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+  <!-- ══════════════════════════════════
+       SIDEBAR
+  ══════════════════════════════════ -->
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+
+    <!-- Brand -->
+    <a href="../index.html" class="sidebar__brand" aria-label="Harmonix – go to homepage">
+      <span class="brand-icon" aria-hidden="true">♪</span>
+      <span class="brand-name">Harmonix</span>
+    </a>
+
+    <!-- User info -->
+    <div class="sidebar__user">
+      <div class="sidebar__avatar" id="sidebarAvatar" aria-hidden="true">?</div>
+      <div class="sidebar__user-info">
+        <p class="sidebar__user-name" id="sidebarName">Loading…</p>
+        <p class="sidebar__user-role" id="sidebarRole">student</p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar__nav" role="navigation" aria-label="Dashboard navigation">
+      <span class="nav-section-label">Main</span>
+
+      <a href="#" class="sidebar-link active" data-panel="overview" aria-current="page">
+        <span class="sidebar-link__icon" aria-hidden="true">🏠</span>
+        Overview
+      </a>
+      <a href="#" class="sidebar-link" data-panel="courses">
+        <span class="sidebar-link__icon" aria-hidden="true">🎵</span>
+        My Courses
+        <span class="sidebar-link__badge">3</span>
+      </a>
+      <a href="#" class="sidebar-link" data-panel="schedule">
+        <span class="sidebar-link__icon" aria-hidden="true">📅</span>
+        Schedule
+      </a>
+      <a href="#" class="sidebar-link" data-panel="progress">
+        <span class="sidebar-link__icon" aria-hidden="true">📈</span>
+        My Progress
+      </a>
+
+      <span class="nav-section-label">Academy</span>
+
+      <a href="#" class="sidebar-link" data-panel="teachers">
+        <span class="sidebar-link__icon" aria-hidden="true">👩‍🏫</span>
+        Teachers
+      </a>
+      <a href="#" class="sidebar-link" data-panel="messages">
+        <span class="sidebar-link__icon" aria-hidden="true">💬</span>
+        Messages
+        <span class="sidebar-link__badge">2</span>
+      </a>
+      <a href="#" class="sidebar-link" data-panel="resources">
+        <span class="sidebar-link__icon" aria-hidden="true">📚</span>
+        Resources
+      </a>
+
+      <span class="nav-section-label">Account</span>
+
+      <a href="#" class="sidebar-link" data-panel="profile">
+        <span class="sidebar-link__icon" aria-hidden="true">👤</span>
+        My Profile
+      </a>
+      <a href="#" class="sidebar-link" data-panel="settings">
+        <span class="sidebar-link__icon" aria-hidden="true">⚙️</span>
+        Settings
+      </a>
+    </nav>
+
+    <!-- Logout -->
+    <div class="sidebar__footer">
+      <button class="sidebar__logout" id="logoutBtn" aria-label="Log out">
+        <span aria-hidden="true">🚪</span>
+        Log Out
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- Overlay for mobile -->
+  <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════
+       MAIN
+  ══════════════════════════════════ -->
+  <div class="dashboard-main">
+
+    <!-- Topbar -->
+    <header class="topbar" role="banner">
+      <button class="topbar__hamburger" id="sidebarToggle"
+              aria-label="Toggle sidebar" aria-expanded="false" aria-controls="sidebar">
+        <span></span><span></span><span></span>
+      </button>
+
+      <h1 class="topbar__title" id="topbarTitle">Overview</h1>
+
+      <div class="topbar__actions">
+        <span class="topbar__greeting" id="topbarGreeting"></span>
+        <button class="topbar__notif" aria-label="Notifications (3 unread)">
+          🔔
+          <span class="notif-dot" aria-hidden="true"></span>
+        </button>
+        <div class="topbar__avatar" id="topbarAvatar"
+             role="img" aria-label="User avatar">?</div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="dashboard-content" id="dashboardContent">
+
+      <!-- ── OVERVIEW PANEL ── -->
+      <section class="tab-panel active" id="panel-overview" aria-labelledby="overviewHeading">
+
+        <!-- Welcome banner -->
+        <div class="welcome-banner">
+          <div class="welcome-banner__text">
+            <h2 id="overviewHeading">Welcome back, <span id="welcomeName">Musician</span>! 🎶</h2>
+            <p>You have <strong id="nextLessonText">1 lesson</strong> scheduled this week. Keep up the great work — consistency is the key to mastery.</p>
+          </div>
+          <a href="#" class="btn btn--gold" data-panel="schedule" id="viewScheduleBtn">View Schedule</a>
+        </div>
+
+        <!-- Stat cards -->
+        <div class="stats-grid" role="list">
+          <div class="stat-card" role="listitem">
+            <div class="stat-card__icon stat-card__icon--purple" aria-hidden="true">🎵</div>
+            <div class="stat-card__body">
+              <div class="stat-card__value">3</div>
+              <div class="stat-card__label">Active Courses</div>
+              <div class="stat-card__change stat-card__change--up">↑ 1 new this month</div>
+            </div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-card__icon stat-card__icon--gold" aria-hidden="true">⏱️</div>
+            <div class="stat-card__body">
+              <div class="stat-card__value">24h</div>
+              <div class="stat-card__label">Practice Time</div>
+              <div class="stat-card__change stat-card__change--up">↑ 3h vs last week</div>
+            </div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-card__icon stat-card__icon--green" aria-hidden="true">✅</div>
+            <div class="stat-card__body">
+              <div class="stat-card__value">18</div>
+              <div class="stat-card__label">Lessons Completed</div>
+              <div class="stat-card__change stat-card__change--up">↑ 4 this month</div>
+            </div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-card__icon stat-card__icon--blue" aria-hidden="true">⭐</div>
+            <div class="stat-card__body">
+              <div class="stat-card__value">92%</div>
+              <div class="stat-card__label">Attendance Rate</div>
+              <div class="stat-card__change stat-card__change--up">↑ 5% vs last month</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two-column grid -->
+        <div class="content-grid-2">
+
+          <!-- My Lessons -->
+          <div>
+            <div class="section-row">
+              <h3>My Active Lessons</h3>
+              <a href="#" class="link-sm" data-panel="courses">View all →</a>
+            </div>
+            <div class="cards-grid" style="grid-template-columns:1fr;">
+
+              <div class="lesson-card">
+                <div class="lesson-card__header">
+                  <div class="lesson-card__icon" aria-hidden="true">🎸</div>
+                  <div>
+                    <div class="lesson-card__title">Guitar — Intermediate</div>
+                    <div class="lesson-card__teacher">with James Thompson</div>
+                  </div>
+                </div>
+                <div class="lesson-card__time">📅 Wednesday, 4:00 PM</div>
+                <div class="lesson-card__progress-wrap">
+                  <div class="lesson-card__progress-label">
+                    <span>Progress</span><span>65%</span>
+                  </div>
+                  <div class="progress-bar-bg" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar-fill" style="width:65%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lesson-card">
+                <div class="lesson-card__header">
+                  <div class="lesson-card__icon" aria-hidden="true">🎹</div>
+                  <div>
+                    <div class="lesson-card__title">Piano — Beginner</div>
+                    <div class="lesson-card__teacher">with Elena Martinez</div>
+                  </div>
+                </div>
+                <div class="lesson-card__time">📅 Friday, 5:30 PM</div>
+                <div class="lesson-card__progress-wrap">
+                  <div class="lesson-card__progress-label">
+                    <span>Progress</span><span>42%</span>
+                  </div>
+                  <div class="progress-bar-bg" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar-fill" style="width:42%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lesson-card">
+                <div class="lesson-card__header">
+                  <div class="lesson-card__icon" aria-hidden="true">🎤</div>
+                  <div>
+                    <div class="lesson-card__title">Vocals — Beginner</div>
+                    <div class="lesson-card__teacher">with Aisha Ibrahim</div>
+                  </div>
+                </div>
+                <div class="lesson-card__time">📅 Saturday, 11:00 AM</div>
+                <div class="lesson-card__progress-wrap">
+                  <div class="lesson-card__progress-label">
+                    <span>Progress</span><span>28%</span>
+                  </div>
+                  <div class="progress-bar-bg" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar-fill" style="width:28%"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Recent activity -->
+          <div>
+            <div class="section-row">
+              <h3>Recent Activity</h3>
+            </div>
+            <div class="activity-feed" role="log" aria-label="Recent activity">
+              <div class="activity-item">
+                <div class="activity-item__icon activity-item__icon--purple" aria-hidden="true">🎸</div>
+                <div class="activity-item__body">
+                  <p class="activity-item__text">Completed <strong>Guitar Lesson #12</strong> — Fingerpicking Patterns</p>
+                  <span class="activity-item__time">Today, 4:00 PM</span>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-item__icon activity-item__icon--gold" aria-hidden="true">⭐</div>
+                <div class="activity-item__body">
+                  <p class="activity-item__text">Received <strong>5-star rating</strong> from James Thompson</p>
+                  <span class="activity-item__time">Yesterday, 5:15 PM</span>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-item__icon activity-item__icon--green" aria-hidden="true">📚</div>
+                <div class="activity-item__body">
+                  <p class="activity-item__text">New resource uploaded: <strong>Piano Theory — Week 6</strong></p>
+                  <span class="activity-item__time">2 days ago</span>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-item__icon activity-item__icon--blue" aria-hidden="true">💬</div>
+                <div class="activity-item__body">
+                  <p class="activity-item__text"><strong>Aisha Ibrahim</strong> sent you a practice note</p>
+                  <span class="activity-item__time">3 days ago</span>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-item__icon activity-item__icon--purple" aria-hidden="true">🎹</div>
+                <div class="activity-item__body">
+                  <p class="activity-item__text">Completed <strong>Piano Lesson #5</strong> — Scales &amp; Arpeggios</p>
+                  <span class="activity-item__time">4 days ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.content-grid-2 -->
+
+        <!-- Upcoming schedule -->
+        <div class="section-row">
+          <h3>Upcoming Schedule</h3>
+          <a href="#" class="link-sm" data-panel="schedule">Full schedule →</a>
+        </div>
+        <div class="schedule-table-wrap">
+          <table class="schedule-table" aria-label="Upcoming lessons">
+            <thead>
+              <tr>
+                <th scope="col">Lesson</th>
+                <th scope="col">Teacher</th>
+                <th scope="col">Date &amp; Time</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Guitar — Intermediate</strong></td>
+                <td>James Thompson</td>
+                <td>Wed, Nov 19 · 4:00 PM</td>
+                <td>60 min</td>
+                <td><span class="status-pill status-pill--today">Today</span></td>
+              </tr>
+              <tr>
+                <td><strong>Piano — Beginner</strong></td>
+                <td>Elena Martinez</td>
+                <td>Fri, Nov 21 · 5:30 PM</td>
+                <td>45 min</td>
+                <td><span class="status-pill status-pill--upcoming">Upcoming</span></td>
+              </tr>
+              <tr>
+                <td><strong>Vocals — Beginner</strong></td>
+                <td>Aisha Ibrahim</td>
+                <td>Sat, Nov 22 · 11:00 AM</td>
+                <td>45 min</td>
+                <td><span class="status-pill status-pill--upcoming">Upcoming</span></td>
+              </tr>
+              <tr>
+                <td><strong>Guitar — Intermediate</strong></td>
+                <td>James Thompson</td>
+                <td>Wed, Nov 26 · 4:00 PM</td>
+                <td>60 min</td>
+                <td><span class="status-pill status-pill--upcoming">Upcoming</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </section><!-- /#panel-overview -->
+
+      <!-- ── PLACEHOLDER PANELS ── -->
+      <section class="tab-panel" id="panel-courses" aria-labelledby="coursesHeading">
+        <h2 id="coursesHeading" style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:1.5rem;">My Courses</h2>
+        <div class="empty-state">
+          <div class="empty-state__icon">🎵</div>
+          <p class="empty-state__text">Full course management coming in the next step. Your 3 enrolled courses will appear here.</p>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-schedule" aria-labelledby="scheduleHeading">
+        <h2 id="scheduleHeading" style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:1.5rem;">My Schedule</h2>
+        <div class="empty-state">
+          <div class="empty-state__icon">📅</div>
+          <p class="empty-state__text">Full calendar &amp; booking system coming in the next step.</p>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-progress" aria-labelledby="progressHeading">
+        <h2 id="progressHeading" style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:1.5rem;">My Progress</h2>
+        <div class="empty-state">
+          <div class="empty-state__icon">📈</div>
+          <p class="empty-state__text">Detailed progress charts and skill tracking coming in the next step.</p>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-teachers" aria-labelledby="teachersHeading">
+        <h2 id="teachersHeading" style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:1.5rem;">Teachers</h2>
+        <div class="empty-state">
+          <div class="empty-state__icon">👩‍🏫</div>
+          <p class="empty-state__text">Teacher profiles and messaging will be available in the next step.</p>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-messages" aria-labelledby="messagesHeading">
+        <h2 id="messagesHeading" style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:1.5rem;">Messages</h2>
+        <div class="empty-state">
+          <div class="empty-state__icon">💬</div>
+          <p class="empty-state__text">Messaging system coming in the next step. You have 2 unread messages.</p>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-resources" aria-labelledby="resourcesHeading">
+        <h2 id="resourcesHeading" style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:1.5rem;">Resources</h2>
+        <div class="empty-state">
+          <div class="empty-state__icon">📚</div>
+          <p class="empty-state__text">Sheet music, videos, and practice materials coming in the next step.</p>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-profile" aria-labelledby="profileHeading">
+        <h2 id="profileHeading" style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:1.5rem;">My Profile</h2>
+        <div class="profile-card" style="background:var(--clr-bg-card);border:1px solid var(--clr-border);border-radius:var(--radius-md);padding:2rem;max-width:520px;">
+          <div style="display:flex;align-items:center;gap:1.2rem;margin-bottom:1.5rem;">
+            <div class="sidebar__avatar" id="profileAvatar" style="width:64px;height:64px;font-size:1.3rem;" aria-hidden="true">?</div>
+            <div>
+              <p id="profileName" style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:#fff;"></p>
+              <p id="profileEmail" style="font-size:0.85rem;color:var(--clr-text-muted);"></p>
+              <p id="profileRole"  style="font-size:0.75rem;color:var(--clr-gold);font-weight:600;text-transform:capitalize;margin-top:2px;"></p>
+            </div>
+          </div>
+          <p style="font-size:0.85rem;color:var(--clr-text-muted);">Full profile editing &amp; avatar upload coming in the next step.</p>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-settings" aria-labelledby="settingsHeading">
+        <h2 id="settingsHeading" style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:1.5rem;">Settings</h2>
+        <div class="empty-state">
+          <div class="empty-state__icon">⚙️</div>
+          <p class="empty-state__text">Account settings, notifications &amp; preferences coming in the next step.</p>
+        </div>
+      </section>
+
+    </main><!-- /.dashboard-content -->
+  </div><!-- /.dashboard-main -->
+</div><!-- /.dashboard-layout -->
+
+<script src="../js/auth.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>
